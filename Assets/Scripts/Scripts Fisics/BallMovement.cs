@@ -7,7 +7,7 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private float speedIncreasePerHit = 0.5f; // Incremento de velocidad por rebote
     [SerializeField] private float maxSpeed = 20f; // Velocidad máxima de la bola
     [SerializeField] private float speed=0f;
-    private Vector2 starPos;
+    private Vector2 startPos;
     private Rigidbody2D rb;
     private void Awake()
     {
@@ -15,14 +15,14 @@ public class BallMovement : MonoBehaviour
     }
     private void Start()
     {
-        starPos = GamesettingsBall.StartPosition;  
-        transform.position = starPos;           // Inicializa la posición de la bola desde el SO
+        startPos = GamesettingsBall.StartPosition;  
+        transform.position = startPos;           // Inicializa la posición de la bola desde el SO
         speed = GamesettingsBall.Speed;         // Inicializa la velocidad de la bola desde el SO
         Launch();
     }
     public void ResetBall()        // Método para reiniciar la posición y velocidad de la bola
     {
-        transform.position = starPos;
+        transform.position = startPos;
         rb.linearVelocity = Vector2.zero;
         speed = GamesettingsBall.Speed;         // Inicializa la velocidad de la bola desde el SO
         Launch();

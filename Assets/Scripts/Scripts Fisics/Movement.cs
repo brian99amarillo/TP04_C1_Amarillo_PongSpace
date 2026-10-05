@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
     [Header("Controles de Movimiento")]
     [SerializeField] private GameSettingsPlayerSO GameSettingsPlayer; // mismo asset arrastrado acá también
     private Rigidbody2D rb;
-    private Vector2 starPos;
+    private Vector2 startPos;
 
     private void Awake()
     {
@@ -13,15 +13,15 @@ public class Movement : MonoBehaviour
     }
     private void Start()
     {   
-        starPos = GameSettingsPlayer.StartPosition;     // Inicializa la posición del jugador desde el asset compartido
-        transform.position = starPos;                   
+        startPos = GameSettingsPlayer.StartPosition;     // Inicializa la posición del jugador desde el asset compartido
+        transform.position = startPos;                   
         GetComponent<SpriteRenderer>().color = GameSettingsPlayer.Color;    // Inicializa el color del jugador desde el asset compartido
         transform.localScale = new Vector3(transform.localScale.x, GameSettingsPlayer.Height, transform.localScale.z);  // Inicializa la altura del jugador desde el asset compartido
     }
 
     public void ResetPosicionPlayer()        // Método para reiniciar la posición y velocidad de los jugadores
     {
-        transform.position = starPos;
+        transform.position = startPos;
         rb.linearVelocity = Vector2.zero;
     }
     private void FixedUpdate()

@@ -50,17 +50,4 @@ public class EventGoal : MonoBehaviour
         yield return new WaitForSecondsRealtime(GameSettings.Cooldown);
         Time.timeScale = 1f;
     }
-
-    //public IEnumerator PauseGoal()
-    //{
-    //    if (GameSettings == null)
-    //    {
-    //        Debug.LogError("GameSettings es NULL en EventGoal.PauseGoal()");
-    //        yield break;
-    //    }
-
-    //    Time.timeScale = 0f;
-    //    yield return new WaitForSecondsRealtime(GameSettings.Cooldown);
-    //    Time.timeScale = 1f;
-    //}
 }

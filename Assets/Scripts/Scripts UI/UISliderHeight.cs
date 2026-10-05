@@ -37,13 +37,13 @@ public class UISliderHeight: MonoBehaviour
         textHeight_player1.text = GameSettingsPlayer1.Height.ToString("F2");
         textHeight_player2.text = GameSettingsPlayer2.Height.ToString("F2");
 
-        Vector3 escala1 = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
-        escala1.y = GameSettingsPlayer1.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
-        player1Movement.transform.localScale = escala1;             // Aplica la nueva escala al player 1
+        Vector3 scale1 = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
+        scale1.y = GameSettingsPlayer1.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
+        player1Movement.transform.localScale = scale1;             // Aplica la nueva escala al player 1
 
-        Vector3 escala2 = player2Movement.transform.localScale;     // Obtiene la escala actual del player 2
-        escala2.y = GameSettingsPlayer2.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
-        player2Movement.transform.localScale = escala2;             // Aplica la nueva escala al player 2
+        Vector3 scale2 = player2Movement.transform.localScale;     // Obtiene la escala actual del player 2
+        scale2.y = GameSettingsPlayer2.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
+        player2Movement.transform.localScale = scale2;             // Aplica la nueva escala al player 2
     }
 
     private void OnDestroy()
@@ -56,17 +56,17 @@ public class UISliderHeight: MonoBehaviour
         GameSettingsPlayer1.Height = value;                     // Actualiza el valor en el asset compartido
         textHeight_player1.text = value.ToString("F2");           // Actualiza el texto del slider
 
-        Vector3 escala = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
-        escala.y = value;                                          // Actualiza la escala en el eje x con el valor del slider
-        player1Movement.transform.localScale = escala;             // Aplica la nueva escala al player 1
+        Vector3 scale = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
+        scale.y = value;                                          // Actualiza la escala en el eje x con el valor del slider
+        player1Movement.transform.localScale = scale;             // Aplica la nueva escala al player 1
     }
     private void OnHeightPlayer2(float value)       // Metodo que se ejecuta cuando el slider del player 2 cambia de valor
     {
         GameSettingsPlayer2.Height = value;                       // Actualiza el valor en el asset compartido
         textHeight_player2.text = value.ToString("F2");             // Actualiza el texto del slider
 
-        Vector3 escala = player2Movement.transform.localScale;      // Obtiene la escala actual del player 2
-        escala.y = value;                                           // Actualiza la escala en el eje x con el valor del slider
-        player2Movement.transform.localScale = escala;              // Aplica la nueva escala al player 2
+        Vector3 scale = player2Movement.transform.localScale;      // Obtiene la escala actual del player 2
+        scale.y = value;                                           // Actualiza la escala en el eje x con el valor del slider
+        player2Movement.transform.localScale = scale;              // Aplica la nueva escala al player 2
     }
 }

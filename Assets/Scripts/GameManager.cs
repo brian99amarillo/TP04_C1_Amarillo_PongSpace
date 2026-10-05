@@ -19,12 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player1 => player1;
     public GameObject Player2 => player2;
     public GameObject Ball => ball;
-    public GameObject GoalPlayer1 => goalPlayer1;
-    public GameObject GoalPlayer2 => goalPlayer2;
-    public TMP_Text ScoreTextPlayer1 => scoreTextPlayer1;
-    public TMP_Text ScoreTextPlayer2 => scoreTextPlayer2;
-    public TMP_Text Timer => timer;
-
+    
     public void Player1Goal()      // Método para actualizar el marcador del jugador 1 y reiniciar las posiciones
     {
         scorePlayer1++;

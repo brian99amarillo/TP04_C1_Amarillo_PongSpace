@@ -36,6 +36,10 @@ public class UIMainMenu : MonoBehaviour
          btnSettings.onClick.RemoveListener(OnSettingsButtonClicked);
          btnCredits.onClick.RemoveListener(OnCreditsButtonClicked);
          btnExit.onClick.RemoveListener(OnExitButtonClicked);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    btnExit.gameObject.SetActive(false);
+#endif
     }
     //Botones del Menu Principal
     private void OnPlayButtonClicked()  // Boton de play para cambiar la escena al juego

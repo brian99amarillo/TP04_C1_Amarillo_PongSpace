@@ -5,24 +5,24 @@ public class UIButtonBackMainMenu : MonoBehaviour
 {
     [Header("Back Buttons")]
     [SerializeField] private Button btnBackSettings; // Boton Back desde settings del menu de pausa
-    [SerializeField] private Button btnBackCreditts; // Boton Back desde creditos del menu de pausa
+    [SerializeField] private Button btnBackCredits; // Boton Back desde creditos del menu de pausa
 
     [Header("Panels")]
     [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject SettingsPanel;
-    [SerializeField] private GameObject CredittsPanel;
+    [SerializeField] private GameObject CreditsPanel;
 
     private void Awake()
     {
         // Botones de volver
         btnBackSettings.onClick.AddListener(OnBackButtonSettingsClicked);  // Back de settings
-        btnBackCreditts.onClick.AddListener(OnBackButtonCredittsClicked); // Back de los creditos
+        btnBackCredits.onClick.AddListener(OnBackButtonCreditsClicked); // Back de los creditos
     }
 
     private void OnDestroy()
     {
         btnBackSettings.onClick.RemoveListener(OnBackButtonSettingsClicked);
-        btnBackCreditts.onClick.RemoveListener(OnBackButtonCredittsClicked);
+        btnBackCredits.onClick.RemoveListener(OnBackButtonCreditsClicked);
     }
 
     private void OnBackButtonSettingsClicked()
@@ -31,9 +31,9 @@ public class UIButtonBackMainMenu : MonoBehaviour
         SettingsPanel.SetActive(false);
     }
 
-    private void OnBackButtonCredittsClicked()
+    private void OnBackButtonCreditsClicked()
     {        
         Menu.SetActive(true);
-        CredittsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 }

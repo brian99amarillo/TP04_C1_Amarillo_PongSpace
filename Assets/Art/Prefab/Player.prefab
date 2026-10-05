@@ -124,10 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LimitsPlayers
   GameSettingsPlayer: {fileID: 11400000, guid: 156713a1d5beff34b9ae5797c0401881, type: 2}
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
   colorOnLimit: {r: 0, g: 0, b: 0, a: 1}
   colorDuration: 0.3
 --- !u!114 &5161098034481354610

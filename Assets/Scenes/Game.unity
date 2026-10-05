@@ -963,7 +963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018471284496246597, guid: e2e319ae9d2ec924bbb034e91fca261f, type: 3}
       propertyPath: m_Name
-      value: ListaDeColoresPlayer 2
+      value: ListOfColor 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBackMenuPause
   UIMenuPause: {fileID: 1276095521}
   btnBackSettings: {fileID: 8247481178557542383}
-  btnBackCreditts: {fileID: 291262247}
+  btnBackCredits: {fileID: 291262247}
 --- !u!114 &1276095523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,10 +2386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameSettigsMenu
   GameSettings: {fileID: 11400000, guid: a0aa008bf017b8a42842e50766450151, type: 2}
-  sliderRondas: {fileID: 2043531571}
-  textRondas: {fileID: 1216868394}
-  sliderTiempo: {fileID: 757736696}
-  textTiempo: {fileID: 517046377}
+  sliderRound: {fileID: 2043531571}
+  textRound: {fileID: 1216868394}
+  sliderTime: {fileID: 757736696}
+  textTime: {fileID: 517046377}
 --- !u!114 &1299289369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3611992197515960328, guid: d126120831cf90b4ca0d440c37404668, type: 3}
@@ -3210,6 +3210,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -6.4989014
       objectReference: {fileID: 0}
+    - target: {fileID: 788732453682337809, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: Height player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898263568122992500, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: Height player 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1054355090291305067, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -3258,6 +3266,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.8999634
       objectReference: {fileID: 0}
+    - target: {fileID: 1707169256552121185, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: WinninGoals
+      objectReference: {fileID: 0}
     - target: {fileID: 1847177994560498428, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3297,6 +3309,10 @@ PrefabInstance:
     - target: {fileID: 1921958530015398529, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.9999695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975583690609877052, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: Speed player 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219472480224557099, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3493,6 +3509,10 @@ PrefabInstance:
     - target: {fileID: 3090271601016932352, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_Options.m_Options.Array.data[4].m_Text
       value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306210956243380995, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: Speed player 2
       objectReference: {fileID: 0}
     - target: {fileID: 3315862884843272296, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3706,6 +3726,10 @@ PrefabInstance:
       propertyPath: m_text
       value: White
       objectReference: {fileID: 0}
+    - target: {fileID: 5915538059643151409, guid: d126120831cf90b4ca0d440c37404668, type: 3}
+      propertyPath: m_Name
+      value: RoundTime
+      objectReference: {fileID: 0}
     - target: {fileID: 6204227132453999896, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -3.991211
@@ -3804,7 +3828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8201266333286514496, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_Name
-      value: ListaDeColoresPlayer 1
+      value: ListOfColor 1
       objectReference: {fileID: 0}
     - target: {fileID: 8230081781506654273, guid: d126120831cf90b4ca0d440c37404668, type: 3}
       propertyPath: m_AnchorMax.x
