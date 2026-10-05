@@ -6,9 +6,9 @@ public class UIMenuPause : MonoBehaviour
 
     [Header("Menu Pause Buttons")]
     [SerializeField] private Button btnContinue;      // Boton de continuar para volver al juego desde el menu de pausa
-    [SerializeField] private Button btnSettings;    // Boton de opciones para abrir el panel de opciones desde el menu principa
-    [SerializeField] private Button btnCredits;    // Boton de creditos para abrir el panel de creditos desde el menu principal
-    [SerializeField] private Button btnExit;        // Boton de salir del juego desde el menu principal
+    [SerializeField] private Button btnSettings;    // Boton de opciones para abrir el panel de opciones desde el menu de pausa
+    [SerializeField] private Button btnCredits;    // Boton de creditos para abrir el panel de creditos desde el menu de pausa
+    [SerializeField] private Button btnExit;        // Boton de salir del juego desde el menu de pausa
 
     [Header("Panels & Scenes")]
     [SerializeField] private GameObject Pause;
@@ -16,11 +16,11 @@ public class UIMenuPause : MonoBehaviour
     [SerializeField] private GameObject CreditsPanel;
     [SerializeField] private GameObject Game;
     private bool isPause = false;
-
+    public bool IsPause { get { return isPause; } }
 
     private void Awake()  // Inicializacion de los botones y sliders
     {
-        // Botones del menu principal
+        // Botones de pausa
         btnContinue.onClick.AddListener(OnContinueButtonClicked);
         btnSettings.onClick.AddListener(OnSettingsButtonClicked);
         btnCredits.onClick.AddListener(OnCreditsButtonClicked);
@@ -35,28 +35,33 @@ public class UIMenuPause : MonoBehaviour
     private void Update()
     {
         if ((Input.GetKeyDown(KeyCode.Escape)) || Input.GetKeyDown(KeyCode.P))  // Pausa el juego al presionar la tecla Escape o P, y abre el menu de pausa
-        {
+        {   
+            isPause=!isPause;
+
             if (isPause)
             {
-                Reanudar();
+                PauseActived(); 
             }
             else
             {
-                Pausar();
+                Restart();
             }
         }
     }
-    private void Pausar()                           // Pausa el juego y abre el menu de pausa
+    private void PauseActived()                           // Pausa el juego y abre el menu de pausa
     {
-        isPause = true;
         Game.SetActive(false);
         Pause.SetActive(true);
         Time.timeScale = 0f; // Detiene el tiempo
     }
 
-    private void Reanudar()                         // Reanuda el juego y cierra el menu de pausa
+    private void Restart()                         // Reanuda el juego y cierra el menu de pausa
     {
-        isPause = false;
+        if (SettingsPanel.activeInHierarchy || CreditsPanel.activeInHierarchy)
+        {
+            SettingsPanel.SetActive(false);
+            CreditsPanel.SetActive(false);
+        }
         Pause.SetActive(false);
         Game.SetActive(true);
         Time.timeScale = 1f; // Reanuda el tiempo
@@ -70,18 +75,27 @@ public class UIMenuPause : MonoBehaviour
         btnExit.onClick.RemoveListener(OnExitButtonClicked);
     }
 
-    //Botones del Menu Principal
-    private void OnContinueButtonClicked()  // Boton de play para cambiar la escena al juego
+    public void ReturnToPauseMenu()
     {
-        Reanudar();
+        isPause = true;
+        SettingsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
+        Pause.SetActive(true);
     }
-    private void OnSettingsButtonClicked() // Abre el panel de opciones desde el menu principal
+
+    //Botones del menu de Pausa
+    private void OnContinueButtonClicked()  // Boton de play para reanudar el juego
+    {
+        isPause = false;
+        Restart();
+    }
+    private void OnSettingsButtonClicked() // Abre el panel de opciones desde el menu de pausa
     {
         Pause.SetActive(false);
         SettingsPanel.SetActive(true);
 
     }
-    private void OnCreditsButtonClicked() // Abre el panel de los creditos desde el menu principal
+    private void OnCreditsButtonClicked() // Abre el panel de los creditos desde el menu de pausa
     {
         Pause.SetActive(false);
         CreditsPanel.SetActive(true);

@@ -3,14 +3,10 @@ using UnityEngine.UI;
 
 public class UIButtonBackMenuPause : MonoBehaviour
 {
+    [SerializeField] private UIMenuPause UIMenuPause; // Referencia al script UIMenuPause para acceder a la variable isPause
     [Header("Back Buttons")]
     [SerializeField] private Button btnBackSettings; // Boton Back desde settings del menu de pausa
     [SerializeField] private Button btnBackCreditts; // Boton Back desde creditos del menu de pausa
-
-    [Header("Panels")]
-    [SerializeField] private GameObject MenuPause;
-    [SerializeField] private GameObject SettingsPanel;
-    [SerializeField] private GameObject CredittsPanel;
 
     private void Awake()
     {
@@ -27,13 +23,11 @@ public class UIButtonBackMenuPause : MonoBehaviour
 
     private void OnBackButtonSettingsClicked()
     {
-        MenuPause.SetActive(true);
-        SettingsPanel.SetActive(false);
+        UIMenuPause.ReturnToPauseMenu();
     }
 
     private void OnBackButtonCredittsClicked()
-    { 
-        MenuPause.SetActive(true);
-        CredittsPanel.SetActive(false);
+    {
+        UIMenuPause.ReturnToPauseMenu();
     }
 }
