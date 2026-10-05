@@ -4,9 +4,10 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private GameSettingsSO GameSettings;
+    [SerializeField] private GameManager GameManager;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Transform ball;
-    [SerializeField] private EventGoal eventGoal; // referencia al script que maneja los goles
+ 
 
     public float timer = 0f;
     private void Start()
@@ -28,11 +29,11 @@ public class Timer : MonoBehaviour
     {
         if (ball.position.x > 0)
         {
-            eventGoal.Player1Goal();
+            GameManager.Player1Goal();
         }
         else
         {
-            eventGoal.Player2Goal();
+            GameManager.Player2Goal();
         }
     }
 
