@@ -26,10 +26,10 @@ public class UISliderSpeed : MonoBehaviour
 
     private void Start()
     {
-        Speed_player1.value = GameSettingsPlayer1.speed;
-        Speed_player2.value = GameSettingsPlayer2.speed;
-        textSpeed_player1.text = GameSettingsPlayer1.speed.ToString("F2");
-        textSpeed_player2.text = GameSettingsPlayer2.speed.ToString("F2");
+        Speed_player1.value = GameSettingsPlayer1.Speed;
+        Speed_player2.value = GameSettingsPlayer2.Speed;
+        textSpeed_player1.text = GameSettingsPlayer1.Speed.ToString("F2");
+        textSpeed_player2.text = GameSettingsPlayer2.Speed.ToString("F2");
     }
     private void OnDestroy()
     {
@@ -39,13 +39,13 @@ public class UISliderSpeed : MonoBehaviour
 
     private void OnSpeedPlayer1(float value)
     {
-        GameSettingsPlayer1.speed = value;
+        GameSettingsPlayer1.Speed = value;
         textSpeed_player1.text = value.ToString("F2");
     }
 
     private void OnSpeedPlayer2(float value)
     {
-        GameSettingsPlayer2.speed = value;
+        GameSettingsPlayer2.Speed = value;
         textSpeed_player2.text = value.ToString("F2");
     }
 }

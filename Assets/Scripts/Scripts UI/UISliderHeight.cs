@@ -32,17 +32,17 @@ public class UISliderHeight: MonoBehaviour
    
     private void Start()            // Metodo que se ejecuta al iniciar el juego, para aplicar los valores de height guardados en el asset
     {
-        Height_player1.value = GameSettingsPlayer1.height;
-        Height_player2.value = GameSettingsPlayer2.height;
-        textHeight_player1.text = GameSettingsPlayer1.height.ToString("F2");
-        textHeight_player2.text = GameSettingsPlayer2.height.ToString("F2");
+        Height_player1.value = GameSettingsPlayer1.Height;
+        Height_player2.value = GameSettingsPlayer2.Height;
+        textHeight_player1.text = GameSettingsPlayer1.Height.ToString("F2");
+        textHeight_player2.text = GameSettingsPlayer2.Height.ToString("F2");
 
         Vector3 escala1 = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
-        escala1.y = GameSettingsPlayer1.height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
+        escala1.y = GameSettingsPlayer1.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
         player1Movement.transform.localScale = escala1;             // Aplica la nueva escala al player 1
 
         Vector3 escala2 = player2Movement.transform.localScale;     // Obtiene la escala actual del player 2
-        escala2.y = GameSettingsPlayer2.height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
+        escala2.y = GameSettingsPlayer2.Height;                   // Actualiza la escala en el eje x con el valor guardado en el asset
         player2Movement.transform.localScale = escala2;             // Aplica la nueva escala al player 2
     }
 
@@ -53,7 +53,7 @@ public class UISliderHeight: MonoBehaviour
     }
     private void OnHeightPlayer1(float value)       // Metodo que se ejecuta cuando el slider del player 1 cambia de valor
     {
-        GameSettingsPlayer1.height = value;                     // Actualiza el valor en el asset compartido
+        GameSettingsPlayer1.Height = value;                     // Actualiza el valor en el asset compartido
         textHeight_player1.text = value.ToString("F2");           // Actualiza el texto del slider
 
         Vector3 escala = player1Movement.transform.localScale;     // Obtiene la escala actual del player 1
@@ -62,7 +62,7 @@ public class UISliderHeight: MonoBehaviour
     }
     private void OnHeightPlayer2(float value)       // Metodo que se ejecuta cuando el slider del player 2 cambia de valor
     {
-        GameSettingsPlayer2.height = value;                       // Actualiza el valor en el asset compartido
+        GameSettingsPlayer2.Height = value;                       // Actualiza el valor en el asset compartido
         textHeight_player2.text = value.ToString("F2");             // Actualiza el texto del slider
 
         Vector3 escala = player2Movement.transform.localScale;      // Obtiene la escala actual del player 2

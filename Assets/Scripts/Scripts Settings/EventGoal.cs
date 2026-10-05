@@ -5,10 +5,11 @@ using TMPro;
 public class EventGoal : MonoBehaviour
 {
     [SerializeField] private GameObject GameManager;
+    [SerializeField] private GameSettingsSO GameSettings;
     [SerializeField] private TMP_Text PlayerWinner;
     [SerializeField] private Timer timer;
     [SerializeField] private GameObject WinPanel;
-    [SerializeField] private float coldown = 2f;
+   
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,9 +30,9 @@ public class EventGoal : MonoBehaviour
 
     public void ResetPositions()       // Método para reiniciar las posiciones de la bola y los jugadores
     {
-        GameManager.GetComponent<GameManager>().ball.GetComponent<BallMovement>().ResetBall();
-        GameManager.GetComponent<GameManager>().player1.GetComponent<Movement>().ResetPosicionPlayer();
-        GameManager.GetComponent<GameManager>().player2.GetComponent<Movement>().ResetPosicionPlayer();
+        GameManager.GetComponent<GameManager>().Ball.GetComponent<BallMovement>().ResetBall();
+        GameManager.GetComponent<GameManager>().Player1.GetComponent<Movement>().ResetPosicionPlayer();
+        GameManager.GetComponent<GameManager>().Player2.GetComponent<Movement>().ResetPosicionPlayer();
         timer.ResetTimer();
     }
 
@@ -41,12 +42,25 @@ public class EventGoal : MonoBehaviour
         Time.timeScale = 0f;
         PlayerWinner.text = $"{winnerName} Wins!";
         WinPanel.SetActive(true);
-    } 
+    }
 
     public IEnumerator PauseGoal()     // Hace una pausa de 2 segundos en el gameplay despues de cada gol
     {
         Time.timeScale = 0f;
-        yield return new WaitForSecondsRealtime(coldown);
+        yield return new WaitForSecondsRealtime(GameSettings.Cooldown);
         Time.timeScale = 1f;
     }
+
+    //public IEnumerator PauseGoal()
+    //{
+    //    if (GameSettings == null)
+    //    {
+    //        Debug.LogError("GameSettings es NULL en EventGoal.PauseGoal()");
+    //        yield break;
+    //    }
+
+    //    Time.timeScale = 0f;
+    //    yield return new WaitForSecondsRealtime(GameSettings.Cooldown);
+    //    Time.timeScale = 1f;
+    //}
 }

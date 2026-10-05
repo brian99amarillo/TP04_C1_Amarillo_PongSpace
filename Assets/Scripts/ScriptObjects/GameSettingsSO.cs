@@ -3,7 +3,25 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Gamesettings", menuName = "Settings/Gamesettings")]
 public class GameSettingsSO : ScriptableObject
 {
-    [SerializeField] public int scoreToWin = 3;
-    [SerializeField] public float matchDuration = 20f;
-    [SerializeField] public float coldown = 2f;
+    [SerializeField] private int scoreToWin = 3;
+    [SerializeField] private float matchDuration = 20f;
+    [SerializeField] private float cooldown = 2f;
+
+    public int ScoreToWin
+    {
+        get => scoreToWin;
+        set => scoreToWin = value;
+    }
+
+    public float MatchDuration
+    {
+        get => matchDuration;
+        set => matchDuration = value;
+    }
+
+    public float Cooldown
+    {
+        get => cooldown;
+        set => cooldown = value;
+    }
 }

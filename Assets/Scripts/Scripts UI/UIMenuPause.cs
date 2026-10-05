@@ -7,13 +7,13 @@ public class UIMenuPause : MonoBehaviour
     [Header("Menu Pause Buttons")]
     [SerializeField] private Button btnContinue;      // Boton de continuar para volver al juego desde el menu de pausa
     [SerializeField] private Button btnSettings;    // Boton de opciones para abrir el panel de opciones desde el menu principa
-    [SerializeField] private Button btnCreditts;    // Boton de creditos para abrir el panel de creditos desde el menu principal
+    [SerializeField] private Button btnCredits;    // Boton de creditos para abrir el panel de creditos desde el menu principal
     [SerializeField] private Button btnExit;        // Boton de salir del juego desde el menu principal
 
     [Header("Panels & Scenes")]
     [SerializeField] private GameObject Pause;
     [SerializeField] private GameObject SettingsPanel;
-    [SerializeField] private GameObject CredittsPanel;
+    [SerializeField] private GameObject CreditsPanel;
     [SerializeField] private GameObject Game;
     private bool isPause = false;
 
@@ -23,7 +23,7 @@ public class UIMenuPause : MonoBehaviour
         // Botones del menu principal
         btnContinue.onClick.AddListener(OnContinueButtonClicked);
         btnSettings.onClick.AddListener(OnSettingsButtonClicked);
-        btnCreditts.onClick.AddListener(OnCredittsButtonClicked);
+        btnCredits.onClick.AddListener(OnCreditsButtonClicked);
         btnExit.onClick.AddListener(OnExitButtonClicked);
     }
 
@@ -66,7 +66,7 @@ public class UIMenuPause : MonoBehaviour
         // Botones del menu de pausa
         btnContinue.onClick.RemoveListener(OnContinueButtonClicked);
         btnSettings.onClick.RemoveListener(OnSettingsButtonClicked);
-        btnCreditts.onClick.RemoveListener(OnCredittsButtonClicked);
+        btnCredits.onClick.RemoveListener(OnCreditsButtonClicked);
         btnExit.onClick.RemoveListener(OnExitButtonClicked);
     }
 
@@ -81,10 +81,10 @@ public class UIMenuPause : MonoBehaviour
         SettingsPanel.SetActive(true);
 
     }
-    private void OnCredittsButtonClicked() // Abre el panel de los creditos desde el menu principal
+    private void OnCreditsButtonClicked() // Abre el panel de los creditos desde el menu principal
     {
         Pause.SetActive(false);
-        CredittsPanel.SetActive(true);
+        CreditsPanel.SetActive(true);
     }
     private void OnExitButtonClicked() // Metodo para salir del juego
     {

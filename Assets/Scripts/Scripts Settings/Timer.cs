@@ -8,11 +8,10 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Transform ball;
  
-
-    public float timer = 0f;
+    private float timer = 0f;
     private void Start()
     {
-        timer = GameSettings.matchDuration; // tiempo inicial, tomado del SO
+        timer = GameSettings.MatchDuration; // tiempo inicial, tomado del SO
     }
     private void Update()
     {
@@ -20,7 +19,7 @@ public class Timer : MonoBehaviour
         if (timer <= 0)
         {
             Goal();
-            timer = GameSettings.matchDuration;
+            timer = GameSettings.MatchDuration;
         }
         timerText.text = "" + timer.ToString("F1");
     }
@@ -39,6 +38,6 @@ public class Timer : MonoBehaviour
 
     public void ResetTimer()
     {
-        timer = GameSettings.matchDuration;
+        timer = GameSettings.MatchDuration;
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 public class GamesettingsBallSO : ScriptableObject
 {
     [Header("Velocidad inicial de la bola")]
-    [SerializeField] public float speed = 5f;
-    [SerializeField] public Vector2 startPosition = Vector2.zero;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private Vector2 startPosition = Vector2.zero;
+    public float Speed => speed;
+    public Vector2 StartPosition => startPosition;
 }

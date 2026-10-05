@@ -25,12 +25,12 @@ public class DropdownColorPlayers : MonoBehaviour
 
     public void OnColorPlayer1Changed(int colorSelect)
     {
-        GameSettingsPlayer1.color = ObtenerColor(colorSelect);
+        GameSettingsPlayer1.Color = ObtenerColor(colorSelect);
     }
 
     public void OnColorPlayer2Changed(int colorSelect)
     {
-        GameSettingsPlayer2.color = ObtenerColor(colorSelect);
+        GameSettingsPlayer2.Color = ObtenerColor(colorSelect);
     }
 
     private Color ObtenerColor(int colorSelect)

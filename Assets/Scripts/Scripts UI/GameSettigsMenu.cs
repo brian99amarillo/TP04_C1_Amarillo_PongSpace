@@ -29,22 +29,22 @@ public class GameSettigsMenu : MonoBehaviour
     private void Start()
     {
         // Inicializa los sliders con los valores actuales del SO
-        sliderRondas.SetValueWithoutNotify(GameSettings.scoreToWin);
-        textRondas.text = GameSettings.scoreToWin.ToString();
+        sliderRondas.SetValueWithoutNotify(GameSettings.ScoreToWin);
+        textRondas.text = GameSettings.ScoreToWin.ToString();
 
-        sliderTiempo.SetValueWithoutNotify(GameSettings.matchDuration); // corregido
-        textTiempo.text = GameSettings.matchDuration.ToString("F0");
+        sliderTiempo.SetValueWithoutNotify(GameSettings.MatchDuration); // corregido
+        textTiempo.text = GameSettings.MatchDuration.ToString("F0");
     }
 
-private void OnRondasChanged(float value)
+    private void OnRondasChanged(float value)
     {
-        GameSettings.scoreToWin = (int)value;
+        GameSettings.ScoreToWin = (int)value;
         textRondas.text = ((int)value).ToString();
     }
 
     private void OnTiempoChanged(float value)
     {
-        GameSettings.matchDuration = value;
+        GameSettings.MatchDuration = value;
         textTiempo.text = value.ToString("F0");
     }
 }

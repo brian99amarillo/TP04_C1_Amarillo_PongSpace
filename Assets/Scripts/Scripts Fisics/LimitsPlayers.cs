@@ -3,21 +3,20 @@
 public class LimitsPlayers : MonoBehaviour
 {
     [SerializeField] private GameSettingsPlayerSO GameSettingsPlayer;
-    [SerializeField] private float MinX;
-    [SerializeField] private float MaxX;
-    [SerializeField] private float MinY;
-    [SerializeField] private float MaxY;
-
+    private float MinX;
+    private float MaxX;
+    private float MinY;
+    private float MaxY;
     [SerializeField] private Color colorOnLimit = Color.black;
     [SerializeField] private float colorDuration = 0.3f;
     private SpriteRenderer sr;
     private Color originalColor;
     private void Start()
     {
-        MinX = GameSettingsPlayer.minX;
-        MaxX = GameSettingsPlayer.maxX;
-        MinY = GameSettingsPlayer.minY;
-        MaxY = GameSettingsPlayer.maxY;
+        MinX = GameSettingsPlayer.MinX;
+        MaxX = GameSettingsPlayer.MaxX;
+        MinY = GameSettingsPlayer.MinY;
+        MaxY = GameSettingsPlayer.MaxY;
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
     }

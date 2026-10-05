@@ -928,7 +928,7 @@ RectTransform:
   m_Father: {fileID: 2962578734391841573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 7764656773784972898}
   - component: {fileID: 4203133406589194245}
   m_Layer: 5
-  m_Name: ListaDeColoresPlayer1
+  m_Name: ListaDeColoresPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
