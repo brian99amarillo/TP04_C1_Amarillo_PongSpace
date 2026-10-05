@@ -2161,6 +2161,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1273967885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5140051073053346226, guid: 11672915dafc52c44b7e2f8fc919b33f, type: 3}
+  m_PrefabInstance: {fileID: 348833494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1276095517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,11 +2249,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuPause
   btnContinue: {fileID: 912658465}
   btnSettings: {fileID: 693158908}
-  btnCredits: {fileID: 0}
+  btnCredits: {fileID: 1273967885}
   btnExit: {fileID: 1151476116}
   Pause: {fileID: 960948273}
   SettingsPanel: {fileID: 7332010837267563237}
-  CreditsPanel: {fileID: 0}
+  CreditsPanel: {fileID: 1685123325}
   Game: {fileID: 2079603114}
 --- !u!114 &1276095522
 MonoBehaviour:
@@ -2256,11 +2267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402f4dca79a287a419eb72742185cd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBackMenuPause
+  UIMenuPause: {fileID: 1276095521}
   btnBackSettings: {fileID: 8247481178557542383}
   btnBackCreditts: {fileID: 291262247}
-  MenuPause: {fileID: 960948273}
-  SettingsPanel: {fileID: 7332010837267563237}
-  CredittsPanel: {fileID: 1685123325}
 --- !u!114 &1276095523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,7 +2808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6917328759989416991, guid: fceb4a5413387a94e95e2c55664e972a, type: 3}
       propertyPath: m_Name
-      value: Creditts Pause
+      value: Credits Pause
       objectReference: {fileID: 0}
     - target: {fileID: 6917328759989416991, guid: fceb4a5413387a94e95e2c55664e972a, type: 3}
       propertyPath: m_IsActive
