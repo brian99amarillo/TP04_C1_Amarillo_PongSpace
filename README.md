@@ -60,6 +60,7 @@ Este juego fue desarrollado como proyecto académico (Image Campus), explorando 
 ¡Gracias por jugar! Cualquier comentario o feedback es bienvenido en la sección de comentarios de itch.io.
 
 Desarrollado por : Brian Amarillo 
+Link de itchio: https://brianamarillo99.itch.io/pongspace
 
 # 🚀 Pong Space
 
@@ -123,3 +124,4 @@ This game was developed as an academic project (Image Campus), exploring classic
 Thanks for playing! Any comments or feedback are welcome in the itch.io comments section.
 
 Developed by: Brian Amarillo
+Itchio link: Link de itchio: https://brianamarillo99.itch.io/pongspace
